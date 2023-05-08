@@ -1,8 +1,14 @@
-"""Defines URL patterns for learning_logs."""
-from django.conf.urls import url
-from . import views
-urlpatterns = [
-    # Home page
+from django.contrib import admin
+from django.urls import path, re_path
 
-    url(r'^$', views.index, name='index'),
+# from learning_logs import views
+from learning_logs.views import *
+
+urlpatterns = [
+    path('', home, name = "home"),
+    
+    path('admin/', admin.site.urls),
+
+    
+
 ]
