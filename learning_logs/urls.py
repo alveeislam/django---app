@@ -6,9 +6,9 @@ from learning_logs.views import *
 
 urlpatterns = [
     path('', home, name = "home"),
-    
+    path('topics/', topics, name = 'topics'),
     path('admin/', admin.site.urls),
-
+    
     
 
 ]
